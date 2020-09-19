@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int star = n/2+1;
+    int space = 1;
+    int original = n/2;
+    for(int i=1;i<=n;i++)
+    {
+        for(int i=1;i<=star;i++)
+        {
+            cout<<"*\t";
+        }
+        for(int k=1;k<=space;k++)
+        {
+            cout<<"\t";
+            
+        }
+        for(int h=1;h<=star;h++)
+        {
+            cout<<"*\t";
+        }
+        if(i<=n/2)
+        {
+            star--;
+            space+=2;
+        }
+        else
+        {
+            space-=2;
+            star++;
+        }
+        cout<<endl;
+
+   }
+}
